@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "international-freight-mod",
+	"version": "${version}",
+	"name": "International Freight Mod",
+	"description": "See the github bage for description.",
+	"authors": [
+		"GJAKaina", "Mabatogo", "Some1Fox"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/international-freight-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"internationalfreightmod.internationalfreightmod.InternationalFreightMod"
+		],
+		"client": [
+			"internationalfreightmod.internationalfreightmod.client.InternationalFreightModClient"
+		]
+	},
+	"mixins": [
+		"international-freight-mod.mixins.json",
+		{
+			"config": "international-freight-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
